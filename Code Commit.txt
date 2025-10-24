@@ -1,0 +1,46 @@
+Code Commit
+Developers commit code changes to a Git repository (e.g., GitHub).
+
+
+Jenkins Build
+Jenkins is triggered to build the Java application using Maven.
+
+Runs: mvn clean install
+Executes unit tests and generates artifacts.
+
+
+
+Code Analysis
+SonarQube performs static code analysis to detect:
+
+Code quality issues
+Bugs
+Security vulnerabilities
+Technical debt
+
+
+
+Security Scan
+AppScan (or similar tool) scans the application for security vulnerabilities.
+
+Can be integrated via CLI or API
+Produces a security report
+
+
+
+Build & Push Docker Image
+Jenkins builds a Docker image of the application and pushes it to a container registry (e.g., Docker Hub, ECR).
+
+
+Update Kubernetes Manifests (GitOps)
+Jenkins updates the image tag in the Kubernetes deployment manifest stored in a GitOps repository.
+
+
+Continuous Deployment via Argo CD
+Argo CD watches the GitOps repository and automatically syncs changes to the development environment in the Kubernetes cluster.
+
+
+Promote to Production
+Once validated in dev, the application is manually promoted to the production environment using Argo CD.
+
+

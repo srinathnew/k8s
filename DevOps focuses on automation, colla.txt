@@ -1,0 +1,19 @@
+DevOps focuses on automation, collaboration, and continuous feedback, whereas traditional IT operations follow a siloed approach with manual deployments and slow release cycles.
+
+9. What are the key metrics for CI/CD performance?
+Answer:
+
+Lead Time: Time from commit to deployment.
+Mean Time to Recovery (MTTR): Time to recover from failures.
+
+ What is trunk-based development, and how does it impact CI/CD?
+Answer:
+Trunk-based development means developers commit directly to the main branch (trunk) instead of using long-lived feature branches.
+
+Pros:
+Faster CI/CD cycles with fewer merge conflicts.
+Reduces integration complexity.
+Cons:
+Requires strict automated testing to prevent breaking changes.
+Example workflow:
+Commit to main → Automated Tests → Deploy to Staging → Deploy to Production.

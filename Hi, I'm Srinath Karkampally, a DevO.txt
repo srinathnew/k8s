@@ -1,0 +1,36 @@
+Hi, I'm Srinath Karkampally, a DevOps Engineer with 3 years of hands-on experience in cloud-native environments. I graduated in 2022 and have been working as devops engineer passionate about designing and implementing  automated systems that seamlessly integrate development and operations. My technical expertise include  Linux, Git, GitHub, Jenkins, Docker, and Kubernetes.
+pom.xml,package.json,requirement.txt
+DTD activities
+
+1)Setting up and maintaining Jenkins pipelines to automate the build, test, and deployment processes.
+2)Ensuring the pipeline stages, such as code checkout, static analysis with SonarQube,dependency checks, and Docker image builds, run smoothly and efficiently
+3)Troubleshooting and resolving any issues that arise during pipeline execution.
+4)Building and pushing Docker images to Docker Hub
+5)Monitoring the health and performance of the Kubernetes cluster and applications using Prometheus and Grafana.
+6)Working closely with development teams to understand their requirements and ensure the CI/CD pipeline meets their needs.
+7)Participating in daily stand-ups and team meetings to provide updates on pipeline status, deployments, and any ongoing issues.
+8)Documenting processes, configurations, and any changes made to the infrastructure or pipeline for future reference.                                                                                                 3 MASTER NODES
+                                                                                                          10 WORKER NODES 
+                                                                                                   EACH NODE SIZE IS HAVING : 4CPU’s & 16GB RAM & 100 GB SSD
+                                                                                                   POD SIZE : 0.5 CPU & 1 GB RAM         
+Clean Workspace: Ensuring a fresh workspace for each build.
+Git Checkout: Cloning the project repository.
+SonarQube Analysis: Performing static code analysis with SonarQube.
+Quality Gate: Verifying code quality against predefined metrics.
+Install Dependencies: Installing project dependencies using npm.
+OWASP Dependency Check: Installed and configured the OWASP Dependency Check plugin.
+to scan for known vulnerabilities in project dependencies.
+Trivy File System Scan: Used Trivy to scan the file system for vulnerabilities.
+Docker Image Build and Push: Built and pushed Docker images to Docker Hub using Jenkins
+and stored credentials securely.
+Trivy Image Scan: Performed vulnerability scanning on the Docker image using Trivy.
+Deployment to Docker Container: Deployed the Docker container to a required environment
+
+1. Code Commit: Developers commit code changes to a Git repository hosted on GitHub.
+2. Jenkins Build: Jenkins is triggered to build the code using Maven. Maven builds the code and runs unit tests.
+3. Code Analysis: Sonar is used to perform static code analysis to identify any code quality issues, security vulnerabilities, and bugs.
+4. Security Scan: AppScan is used to perform a security scan on the application to identify any security vulnerabilities.
+5. Deploy to Dev Environment: If the build and scans pass, Jenkins deploys the code to a development environment managed by Kubernetes.
+6. Continuous Deployment: Argo CD is used to manage continuous deployment. Argo CD watches the Git repository and automatically deploys new changes to the development environment as soon as they are committed.
+7. Promote to Production: When the code is ready for production, it is manually promoted using Argo CD to the production environment.
+
